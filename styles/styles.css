@@ -1,4 +1,4 @@
-/*   
+/*
  * Template Name: Developer - Responsive Website Template for Developers
  * Version: 1.5
  * Author: Xiaoying Riley
@@ -10,7 +10,7 @@
 body {
   font-family: 'Lato', arial, sans-serif;
   color: #434343;
-  background: #DAE3E7;
+  background: #62b1bf;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -26,7 +26,7 @@ h6 {
   color: #778492;
 }
 a {
-  color: #3AAA64;
+  color: #ffd67c;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   -ms-transition: all 0.4s ease-in-out;
@@ -60,8 +60,8 @@ a.btn:focus {
 }
 a.btn-cta-primary,
 .btn-cta-primary {
-  background: #54ba4e;
-  border: 1px solid #54ba4e;
+  background: #479FC8;
+  border: 1px solid #479FC8;
   color: #fff;
   font-weight: 600;
   text-transform: uppercase;
@@ -117,8 +117,8 @@ iframe {
 /* ======= Header ======= */
 .header {
   padding: 30px 0;
-  background: #f5f5f5;
-  border-top: 10px solid #778492;
+  background: #f9fbfb;
+  border-top: 10px solid #3a4a4d;
 }
 .header .btn {
   margin-top: 60px;
@@ -126,6 +126,9 @@ iframe {
 }
 .header .profile-image {
   margin-right: 30px;
+  width: 200px;
+  height: auto;
+  border-radius: 30px;
 }
 .header .profile-content .name {
   color: #49515a;
@@ -173,7 +176,7 @@ iframe {
   margin-bottom: 30px;
 }
 .section .section-inner {
-  background: #fff;
+  background: #f9fbfb;
   padding: 30px;
 }
 .section .heading {
@@ -412,6 +415,40 @@ iframe {
 .testimonials .item .source .title {
   color: #999;
 }
+
+/* conferences section */
+.conferences .item {
+  margin-bottom: 30px;
+}
+.conferences .item:last-child {
+  margin-bottom: 0;
+}
+.conferences .item .title {
+  font-size: 16px;
+  margin-top: 0;
+  margin-left:25px;
+}
+.conferences .item .title::before {
+  content: "\f073"; /* FontAwesome Unicode */
+  font-family: FontAwesome;
+  display: inline-block;
+  color: #778492;
+  margin-left: -25px; /* same as padding-left set on li */
+  padding-right: 25px;
+  width: 16px; /* same as padding-left set on li */
+}
+.conferences .item .paper {
+  font-family: "Lato", arial, sans-serif;
+  font-size: 13px;
+  color: #999;
+  font-weight: 600;
+  padding-left: 25px;
+}
+.conferences .item .paper .year {
+  color: #b0b7bf;
+  font-weight: 500;
+}
+
 /* Education section */
 .education .item {
   margin-bottom: 30px;
@@ -434,6 +471,27 @@ iframe {
   color: #b0b7bf;
   font-weight: 500;
 }
+
+/* publications section */
+.publication ul {
+  list-style: none;
+  padding: 0;
+  -webkit-padding-start: 30px;
+}
+.publication li {
+  padding-left: 0em;
+  list-style: none;
+}
+.publication li:before {
+  content: "\f073"; /* FontAwesome Unicode */
+  font-family: FontAwesome;
+  display: inline-block;
+  color: #778492;
+  margin-left: -1.5em; /* same as padding-left set on li */
+  width: 1.5em; /* same as padding-left set on li */
+}
+
+
 /* Language Section */
 .languages .item {
   margin-bottom: 15px;
