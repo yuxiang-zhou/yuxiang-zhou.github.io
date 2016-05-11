@@ -437,7 +437,30 @@ iframe {
   padding-right: 25px;
   width: 16px; /* same as padding-left set on li */
 }
-.conferences .item .paper {
+.conferences .item .authors {
+  font-family: "Lato", arial, sans-serif;
+  font-size: 13px;
+  color: #999;
+  font-weight: 600;
+  padding-left: 25px;
+}
+.conferences .item .location {
+  font-family: "Lato", arial, sans-serif;
+  font-size: 13px;
+  color: #999;
+  font-weight: 600;
+  padding-left: 25px;
+}
+.conferences .item .bibtex {
+  font-family: "Lato", arial, sans-serif;
+  font-size: 10px;
+  color: #666;
+}
+.conferences .item .bibtex .indent{
+  padding-left: 12px;
+  margin: 0px;
+}
+.conferences .item .links {
   font-family: "Lato", arial, sans-serif;
   font-size: 13px;
   color: #999;
@@ -505,7 +528,7 @@ iframe {
 .languages .item:last-child {
   margin-bottom: 0;
 }
-.languages .item .fa {
+.languages .item .rating {
   color: #79d19a;
 }
 /* Blog Section */
@@ -600,4 +623,15 @@ iframe {
   .container {
     width: 1360px;
   }
+}
+
+/*animation*/
+
+.section.ng-enter {
+  opacity: 0;
+  transition:all .5s ease-in-out;
+}
+
+.section.ng-enter-active {
+  opacity: 1;
 }

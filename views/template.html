@@ -6,11 +6,7 @@
             <h1 class="name">{{fullname}}</h1>
             <h2 class="desc">{{current}}</h2>
             <ul class="social list-inline">
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                <li><a href="#"><i class="fa fa-github-alt"></i></a></li>
-                <li class="last-item"><a href="#"><i class="fa fa-hacker-news"></i></a></li>
+                <li ng-repeat='social in socialnetworks'><a href="{{social.url}}"><i class="fa {{social.icon}}"></i></a></li>
             </ul>
         </div><!--//profile-->
         <a class="btn btn-cta-primary pull-right" href="#" target="_blank"><i class="fa fa-paper-plane"></i> Contact Me</a>
@@ -20,7 +16,7 @@
 <div class="container sections-wrapper">
     <div class="row">
         <div class="primary col-md-8 col-sm-12 col-xs-12">
-            <section class="about section">
+            <section class="about section" ng-if='aboutme'>
                 <div class="section-inner">
                     <h2 class="heading">About Me</h2>
                     <div class="content">
@@ -29,7 +25,7 @@
                 </div><!--//section-inner-->
             </section><!--//section-->
 
-           <section class="latest section">
+            <section class="latest section" ng-if='featured_projects.length'>
                 <div class="section-inner">
                     <h2 class="heading">Latest Projects</h2>
                     <div class="content">
@@ -39,7 +35,7 @@
                             <p class="summary">{{proj.summary}}</p>
                             <div class="featured-image">
                                 <a href="{{proj.url}}" target="_blank">
-                                <img class="img-responsive project-image" src="{{proj.img}}" alt="project name" />
+                                  <img class="img-responsive project-image" src='{{proj.img}}' alt="{{proj.title}}" />
                                 </a>
                                 <div class="ribbon">
                                     <div class="text">New</div>
@@ -53,7 +49,7 @@
                         <hr class="divider" />
                         <div ng-repeat='proj in projects' class="item row">
                             <a class="col-md-4 col-sm-4 col-xs-12" href="{{proj.url}}" target="_blank">
-                            <img class="img-responsive project-image" src="{{proj.img}}" alt="project name" />
+                              <!-- <img class="img-responsive project-image" src='{{proj.img}}' alt="{{proj.title}}" /> -->
                             </a>
                             <div class="desc col-md-8 col-sm-8 col-xs-12">
                                 <h3 class="title"><a href="{{proj.url}}" target="_blank">{{proj.title}}</a></h3>
@@ -67,7 +63,7 @@
             </section><!--//section-->
 
 
-            <section class="experience section">
+            <section class="experience section" ng-if='teaching.length'>
                 <div class="section-inner">
                     <h2 class="heading">Teaching Experiences</h2>
                     <div class="content">
@@ -81,7 +77,7 @@
                 </div><!--//section-inner-->
             </section><!--//section-->
 
-            <section class="experience section">
+            <section class="experience section" ng-if='experiences.length'>
                 <div class="section-inner">
                     <h2 class="heading">Working Experiences</h2>
                     <div class="content">
@@ -111,7 +107,7 @@
 
         </div><!--//primary-->
         <div class="secondary col-md-4 col-sm-12 col-xs-12">
-             <aside class="info aside section">
+             <aside class="info aside section" ng-if='location'>
                 <div class="section-inner">
                     <h2 class="heading sr-only">Basic Information</h2>
                     <div class="content">
@@ -125,7 +121,7 @@
                 </div><!--//section-inner-->
             </aside><!--//aside-->
 
-            <aside class="skills aside section">
+            <aside class="skills aside section" ng-if='skills'>
                 <div class="section-inner">
                     <h2 class="heading">Skills</h2>
                     <div class="content">
@@ -142,7 +138,7 @@
                                 </div><!--//level-bar-->
                             </div><!--//item-->
 
-                            <p><a class="more-link" href="#"><i class="fa fa-external-link"></i> More on Coderwall</a></p>
+                            <!-- <p><a class="more-link" href="#"><i class="fa fa-external-link"></i> More on Coderwall</a></p> -->
                         </div>
                     </div><!--//content-->
                 </div><!--//section-inner-->
@@ -161,27 +157,37 @@
                 </div><!--//section-inner-->
             </aside><!--//section-->
 
-            <aside class="conferences aside section">
+            <aside class="conferences aside section" ng-if='publications.length'>
               <div class="section-inner">
                 <h2 class="heading">Publications</h2>
                 <div class="content">
                     <div ng-repeat='pub in publications' class="item">
                         <h3 class="title">{{pub.title}} </h3>
-                        <h4 class="paper">{{pub.authors}}</h4>
-                        <h4 class="paper">{{pub.location}}</h4>
+                        <h4 class="authors">{{pub.authors}}</h4>
+                        <h4 class="location">{{pub.location}}</h4>
+                        <h5 class="links" ng-if='pub.pdf || pub.bibtex || pub.url'>
+                          <a ng-if='pub.pdf' href='{{pub.pdf}}'>[pdf]</a>
+                          <a ng-if='pub.url' href='{{pub.url}}'>[url]</a>
+                          <a ng-if='pub.supp' href='{{pub.supp}}'>[supplementary]</a>
+                          <a ng-if='pub.bibtex' ng-click='pub.isCollapsed = !pub.isCollapsed'>[bibtex]</a>
+                        </h5>
+                        <div uib-collapse="pub.isCollapsed" ng-if='pub.bibtex'>
+                          <div class="bibtex well well-lg" ng-bind-html="pub.bibtex"></div>
+                        </div>
                     </div><!--//item-->
                 </div><!--//content-->
               </div><!--//section-inner-->
             </aside><!--//section-->
 
-            <aside class="languages aside section">
+            <aside class="languages aside section" ng-if='languages.length'>
                 <div class="section-inner">
                     <h2 class="heading">Languages</h2>
                     <div class="content">
                         <ul class="list-unstyled">
                             <li ng-repeat='lang in languages' class="item">
                                 <span class="title"><strong>{{lang.name}}:</strong></span>
-                                <span class="level">{{lang.level_title}} <br class="visible-xs"/><i ng-repeat='i in lang.level track by $index' class="fa fa-star"></i></span>
+                                <span class="level">{{lang.level_title}} <br class="visible-xs"/></span>
+                                <uib-rating class='rating' ng-model="lang.level" max="5" read-only="true"></uib-rating>
                             </li><!--//item-->
                         </ul>
                     </div><!--//content-->
@@ -193,9 +199,9 @@
 </div><!--//masonry-->
 
 <!-- ******FOOTER****** -->
-<footer class="footer">
+<footer class="footer section" ng-if='aboutme'>
     <div class="container text-center">
             <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can check out other license options via our website: themes.3rdwavemedia.com */-->
-            <small class="copyright">Designed with <i class="fa fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+            <!-- <small class="copyright">Designed with <i class="fa fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small> -->
     </div><!--//container-->
 </footer><!--//footer-->

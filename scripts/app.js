@@ -16,9 +16,10 @@ var app = angular
     'ngCookies',
     'ngAnimate'
   ])
-  .config([ '$stateProvider','$urlRouterProvider','$ocLazyLoadProvider',
-  function ($stateProvider,$urlRouterProvider,$ocLazyLoadProvider) {
+  .config([ '$stateProvider','$urlRouterProvider','$ocLazyLoadProvider', '$compileProvider',
+  function ($stateProvider,$urlRouterProvider,$ocLazyLoadProvider, $compileProvider) {
 
+    $compileProvider.debugInfoEnabled(false);
 
     $ocLazyLoadProvider.config({
       debug:false,
