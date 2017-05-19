@@ -80,6 +80,20 @@ angular.module('resume').controller(
             location: 'CVPR 2016, Las Vagas, Nevada, US',
             isCollapsed: true
           },{
+            authors: 'Yue Zhang, Yuxiang Zhou, Jie Shen, Björn Schuller',
+            title: 'Semi-autonomous Data Enrichment Based on Cross-task Labelling of Missing Targets for Holistic Speech Analysis',
+            url: 'http://ieeexplore.ieee.org/document/7472847/?arnumber=7472847',
+            location: 'ICASSP 2016, Shanghai, China',
+            isCollapsed: true,
+            bibtex: $sce.trustAsHtml('@inproceedings{zhang2016semi,' +
+              '<p class="indent">author={Zhang, Yue and Zhou, Yuxiang and Shen, Jie and others},</p>' +
+              '<p class="indent">pages={6090--6094},</p>' +
+              '<p class="indent">booktitle={2016 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},</p>' +
+              '<p class="indent">year={2016},</p>' +
+              '<p class="indent">title={Semi-autonomous data enrichment based on cross-task labelling of missing targets for holistic speech analysis},</p>' +
+              '<p class="indent">organization={IEEE},</p>' +
+              '<p>}</p>'),
+          },{
             authors: 'Yun Liao, Yuxiang Zhou, Hua Zhou, Zhihong Liang',
             title: 'Fingertips Detection Algorithm Based on Skin Colour Filtering and Distance Transformation',
             bibtex: $sce.trustAsHtml('@inproceedings{liao2012fingertips,' +
@@ -154,15 +168,15 @@ angular.module('resume').controller(
           }
         ]};
 
-        $scope.featured_projects = [
-          {
-            title: 'Market Analysor',
-            url: 'http://178.62.38.12:9000',
-            summary: 'The project fetches latest stock information from verious resources and migrated in a simple view. Also machine learning algorithms are applyed for more complex analysis.',
-            img: 'images/marketanalysor.png',
-            descriptions: []
-          }
-        ];
+        // $scope.featured_projects = [
+        //   {
+        //     title: 'Market Analysor',
+        //     url: 'http://178.62.38.12:9000',
+        //     summary: 'The project fetches latest stock information from verious resources and migrated in a simple view. Also machine learning algorithms are applyed for more complex analysis.',
+        //     img: 'images/marketanalysor.png',
+        //     descriptions: []
+        //   }
+        // ];
         $scope.projects = [];
 
         $scope.academic_projects = [
