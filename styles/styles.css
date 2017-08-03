@@ -101,6 +101,10 @@ a.dotted-link:hover {
   text-decoration: none;
   color: #49515a;
 }
+
+b {
+    font-weight: 900;
+}
 /*
 iframe {
 
