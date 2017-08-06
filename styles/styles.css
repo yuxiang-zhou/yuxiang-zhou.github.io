@@ -433,7 +433,7 @@ iframe {
   margin-left:25px;
 }
 .conferences .item .title::before {
-  content: "\f073"; /* FontAwesome Unicode */
+  content: "\f0f6"; /* FontAwesome Unicode */
   font-family: FontAwesome;
   display: inline-block;
   color: #778492;

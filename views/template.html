@@ -36,6 +36,7 @@
                     <h2 class="heading">Publications</h2>
                     <div class="content">
                         <div ng-repeat='pub in publications' class="item">
+                            <hr ng-if='!$first' />
                             <div class='row'>
                                 <div class='col-sm-8'>
                                     <h3 class="title">{{pub.title}} </h3>
