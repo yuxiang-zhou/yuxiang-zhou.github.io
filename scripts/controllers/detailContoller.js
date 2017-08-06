@@ -58,6 +58,46 @@ angular.module('resume').controller(
 
                 $scope.publications = [{
                     authors: [
+                        'Jiankang Deng',
+                        'Yuxiang Zhou',
+                        'Stefanos Zafeiriou'
+                    ],
+                    title: 'Marginal Loss for Deep Face Recognition',
+                    pdf: 'http://openaccess.thecvf.com/content_cvpr_2017_workshops/w33/papers/Deng_Marginal_Loss_for_CVPR_2017_paper.pdf',
+                    bibtex: $sce.trustAsHtml(`
+                        <p>@InProceedings{Deng_2017_CVPR_Workshops,</p>
+                        <p class="indent">author = {Deng, Jiankang and Zhou, Yuxiang and Zafeiriou, Stefanos},</p>
+                        <p class="indent">title = {Marginal Loss for Deep Face Recognition},</p>
+                        <p class="indent">booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},</p>
+                        <p class="indent">month = {July},</p>
+                        <p class="indent">year = {2017}</p>
+                        <p>}</p>
+                    `),
+                    location: 'CVPRW 2017, Hawaii, US',
+                    isCollapsed: true,
+                    image_url: 'https://jiankangdeng.github.io/resources/marginal.png'
+                }, {
+                    authors: [
+                        'Yuxiang Zhou',
+                        'Stefanos Zafeiriou'
+                    ],
+                    title: 'Deformable Models of Ears in-the-wild for Alignment and Recognition',
+                    pdf: 'https://ibug.doc.ic.ac.uk/media/uploads/documents/fg2017earrecognitioninthewild.pdf',
+                    bibtex: $sce.trustAsHtml(`
+                        <p>@inproceedings{zhou2017deformable,</p>
+                        <p class="indent">  title={Deformable Models of Ears in-the-wild for Alignment and</p> Recognition},
+                        <p class="indent">  author={Zhou, Yuxiang and Zaferiou, Stefanos},</p>
+                        <p class="indent">  booktitle={Automatic Face \& Gesture Recognition (FG 2017), 2017 12th</p> IEEE International Conference on},
+                        <p class="indent">  pages={626--633},</p>
+                        <p class="indent">  year={2017},</p>
+                        <p class="indent">  organization={IEEE}</p>
+                        <p>}</p>
+                    `),
+                    location: 'FG 2017, Washington DC, US',
+                    isCollapsed: true,
+                    image_url: 'images/deformable_ear.png'
+                }, {
+                    authors: [
                         'Yuxiang Zhou',
                         'Epameinondas Antonakos',
                         'Anastasios Roussos',
@@ -75,7 +115,8 @@ angular.module('resume').controller(
                         '<p class="indent">year = {2016},</p>' +
                         '<p>}</p>'),
                     location: 'CVPR 2016, Las Vagas, Nevada, US',
-                    isCollapsed: true
+                    isCollapsed: true,
+                    image_url: 'images/shapeflow.png'
                 }, {
                     authors: [
                         'Yue Zhang',
@@ -95,6 +136,7 @@ angular.module('resume').controller(
                         '<p class="indent">title={Semi-autonomous data enrichment based on cross-task labelling of missing targets for holistic speech analysis},</p>' +
                         '<p class="indent">organization={IEEE},</p>' +
                         '<p>}</p>'),
+                    image_url: 'images/speechanalysis.png'
                 }, {
                     authors: [
                         'Yun Liao',
@@ -113,7 +155,8 @@ angular.module('resume').controller(
                         '}'),
                     url: 'http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=6319261',
                     location: 'QSIC 2012, Xi’an, China',
-                    isCollapsed: true
+                    isCollapsed: true,
+                    image_url: 'images/fingertips.png'
                 }, ];
 
                 $scope.languages = [{
