@@ -83,6 +83,7 @@ angular.module('resume').controller(
                     ],
                     title: 'Deformable Models of Ears in-the-wild for Alignment and Recognition',
                     pdf: 'https://ibug.doc.ic.ac.uk/media/uploads/documents/fg2017earrecognitioninthewild.pdf',
+                    url: 'https://ibug.doc.ic.ac.uk/resources/ibug-ears/',
                     bibtex: $sce.trustAsHtml(`
                         <p>@inproceedings{zhou2017deformable,</p>
                         <p class="indent">  title={Deformable Models of Ears in-the-wild for Alignment and</p> Recognition},
