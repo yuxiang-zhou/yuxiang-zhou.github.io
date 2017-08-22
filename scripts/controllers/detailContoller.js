@@ -75,7 +75,7 @@ angular.module('resume').controller(
                     `),
                     location: 'CVPRW 2017, Hawaii, US',
                     isCollapsed: true,
-                    image_url: 'images/marginal.png'
+                    image_url: 'images/marginal_loss.png'
                 }, {
                     authors: [
                         'Yuxiang Zhou',
