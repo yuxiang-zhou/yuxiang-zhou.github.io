@@ -75,7 +75,7 @@ angular.module('resume').controller(
                     `),
                     location: 'CVPRW 2017, Hawaii, US',
                     isCollapsed: true,
-                    image_url: 'https://jiankangdeng.github.io/resources/marginal.png'
+                    image_url: 'images/marginal.png'
                 }, {
                     authors: [
                         'Yuxiang Zhou',
