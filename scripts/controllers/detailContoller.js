@@ -59,6 +59,26 @@ angular.module('resume').controller(
                 $scope.publications = [{
                     authors: [
                         'Jiankang Deng',
+                        'George Trigeorgis',
+                        'Yuxiang Zhou',
+                        'Stefanos Zafeiriou'
+                    ],
+                    title: 'Joint Multi-view Face Alignment in the Wild',
+                    pdf: 'https://jiankangdeng.github.io/resources/paper/Deng_MHM_submit_TIP_2017_paper.pdf',
+                    bibtex: $sce.trustAsHtml(`
+                        <p>@article{deng2017joint,</p>
+                        <p class="indent">title={Joint Multi-view Face Alignment in the Wild},</p>
+                        <p class="indent">author={Deng, Jiankang and Trigeorgis, George and Zhou, Yuxiang and Zafeiriou, Stefanos},</p>
+                        <p class="indent">journal={arXiv preprint arXiv:1708.06023},</p>
+                        <p class="indent">year={2017}</p>
+                        <p>}</p>
+                    `),
+                    location: 'arxiv, 2017',
+                    isCollapsed: true,
+                    image_url: 'images/MHM.png'
+                }, {
+                    authors: [
+                        'Jiankang Deng',
                         'Yuxiang Zhou',
                         'Stefanos Zafeiriou'
                     ],
