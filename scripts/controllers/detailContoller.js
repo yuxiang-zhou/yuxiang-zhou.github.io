@@ -63,6 +63,60 @@ angular.module('resume').controller(
                 $scope.publications = [
                     {
                         authors: [
+                            'Jiankang Deng','Shiyang Cheng','Niannan Xue',' Yuxiang Zhou','Stefanos Zafeiriou'
+                        ],
+                        title: 'UV-GAN: Adversarial Facial UV Map Completion for Pose-invariant Face Recognition',
+                        pdf: 'https://ibug.doc.ic.ac.uk/media/uploads/documents/0623.pdf',
+                        bibtex: $sce.trustAsHtml(`
+                            <p>@article{deng2017uv,</p>
+                            <p class="indent">title={UV-GAN: Adversarial Facial UV Map Completion for Pose-invariant Face Recognition},</p>
+                            <p class="indent">author={Deng, Jiankang and Cheng, Shiyang and Xue, Niannan and Zhou, Yuxiang and Zafeiriou, Stefanos},</p>
+                            <p class="indent">journal={arXiv preprint arXiv:1712.04695},</p>
+                            <p class="indent">year={2017}</p>
+                            <p>}</p>
+                        `),
+                        location: 'CVPR 2018',
+                        isCollapsed: true,
+                        image_url: 'images/uv-gan.png'
+                    },
+                    {
+                        authors: [
+                            'Yuxiang Zhou', 'Jiankang Deng', 'Stefanos Zaferiou'
+                        ],
+                        title: 'Improve Accurate Pose Alignment and Action Localization by Dense Pose Estimation',
+                        pdf: 'https://ibug.doc.ic.ac.uk/media/uploads/documents/fg2018_dc_paper_8.1.pdf',
+                        bibtex: $sce.trustAsHtml(`
+                            <p>@article{yuxiang2018,</p>
+                            <p class="indent">title={Improve Accurate Pose Alignment and Action Localization by Dense Pose Estimation},</p>
+                            <p class="indent">author={Y. Zhou and J. Deng and S. Zafeiriou, Stefanos},</p>
+                            <p class="indent">booktitle={FG'2018},</p>
+                            <p class="indent">year={2018}</p>
+                            <p>}</p>
+                        `),
+                        location: 'FG 2018',
+                        isCollapsed: true,
+                        image_url: 'images/fg-2018-pose.png'
+                    },
+                    {
+                        authors: [
+                            'Jiankang Deng', 'Yuxiang Zhou', 'Shiyang Cheng', 'Stefanos Zaferiou'
+                        ],
+                        title: 'Cascade Multi-view Hourglass Model for Robust 3D Face Alignment',
+                        pdf: 'https://ibug.doc.ic.ac.uk/media/uploads/documents/fg2018_3dalignment.pdf',
+                        bibtex: $sce.trustAsHtml(`
+                            <p>@article{jiankangfg2018,</p>
+                            <p class="indent">title={Cascade Multi-view Hourglass Model for Robust 3D Face Alignment},</p>
+                            <p class="indent">author={J. Deng, Y. Zhou, S. Cheng and S. Zafeiriou},</p>
+                            <p class="indent">booktitle={FG'2018},</p>
+                            <p class="indent">year={2018}</p>
+                            <p>}</p>
+                        `),
+                        location: 'FG 2018',
+                        isCollapsed: true,
+                        image_url: 'images/fg-2018-multiview.png'
+                    },
+                    {
+                        authors: [
                             'Jiankang Deng',
                             'George Trigeorgis',
                             'Yuxiang Zhou',
