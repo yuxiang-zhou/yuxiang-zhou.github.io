@@ -63,7 +63,7 @@ angular.module('resume').controller(
                 $scope.publications = [
                     {
                         authors: [
-                            'Jiankang Deng','Shiyang Cheng','Niannan Xue',' Yuxiang Zhou','Stefanos Zafeiriou'
+                            'Jiankang Deng','Shiyang Cheng','Niannan Xue','Yuxiang Zhou','Stefanos Zafeiriou'
                         ],
                         title: 'UV-GAN: Adversarial Facial UV Map Completion for Pose-invariant Face Recognition',
                         pdf: 'https://ibug.doc.ic.ac.uk/media/uploads/documents/0623.pdf',
