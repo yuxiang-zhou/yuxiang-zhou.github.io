@@ -70,6 +70,15 @@
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
         }
+        
+        /* Publication Image Styling */
+        .pub-thumbnail {
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .pub-item:hover .pub-thumbnail {
+            transform: scale(1.03);
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-700 antialiased overflow-x-hidden">
@@ -293,8 +302,8 @@
                 <!-- Pub 1: Gemini -->
                 <div class="pub-item selected-pub bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden" data-aos="fade-up">
                     <div class="absolute top-0 left-0 w-1 h-full bg-blue-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="flex flex-col md:flex-row gap-6">
-                        <div class="flex-1">
+                    <div class="flex flex-col md:flex-row gap-8 items-start">
+                        <div class="flex-1 order-2 md:order-1">
                             <div class="flex items-center gap-3 mb-3">
                                 <span class="px-3 py-1 rounded-full text-xs font-bold bg-blue-50 text-blue-600 border border-blue-100">Blog 2024</span>
                             </div>
@@ -310,25 +319,33 @@
                                 <button onclick="copyBibtex(this)" data-bibtex="@article{team2025gemini, title={Gemini Robotics: Bringing AI into the Physical World}, author={Team, Gemini Robotics and Abeyruwan, Saminda and Ainslie, Joshua and Alayrac, Jean-Baptiste and Arenas, Montserrat Gonzalez and Armstrong, Travis and Balakrishna, Ashwin and Baruch, Robert and Bauza, Maria and Blokzijl, Michiel and others}, journal={arXiv preprint arXiv:2503.20020}, year={2025}}" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-purple-600 bg-slate-50 hover:bg-purple-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-quote-right mr-2"></i> Copy BibTeX</button>
                             </div>
                         </div>
+                        <div class="w-full md:w-72 flex-shrink-0 order-1 md:order-2 mb-2 md:mb-0">
+                            <img src="https://lh3.googleusercontent.com/I3LyOcpijrKfJ90UteiAN9ny73Ly-eNb2l3vsC6fOtl3UQKKufCzgeZMh26--7nV36oTUOk9B7B4FIhCKrVYAksGW2DVcviQoWL5BmErDNsIMiX7AQ=w2144-h1206-n-nu-rw" class="pub-thumbnail rounded-lg shadow-sm border border-slate-100 w-full h-auto" alt="Gemini Robotics">
+                        </div>
                     </div>
                 </div>
 
                 <!-- Pub 2: RoboCat -->
                 <div class="pub-item selected-pub bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden" data-aos="fade-up">
                     <div class="absolute top-0 left-0 w-1 h-full bg-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="flex-1">
-                        <div class="flex items-center gap-3 mb-3">
-                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-indigo-50 text-indigo-600 border border-indigo-100">TMLR 2023</span>
+                    <div class="flex flex-col md:flex-row gap-8 items-start">
+                        <div class="flex-1 order-2 md:order-1">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="px-3 py-1 rounded-full text-xs font-bold bg-indigo-50 text-indigo-600 border border-indigo-100">TMLR 2023</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                                RoboCat: A Self-Improving Foundation Agent for Robotic Manipulation
+                            </h3>
+                            <p class="text-slate-600 mb-4 text-sm leading-relaxed">
+                                Konstantinos Bousmalis*, ..., <span class="highlight-author">Yuxiang Zhou*</span>, et al.
+                            </p>
+                            <div class="flex flex-wrap gap-3">
+                                <a href="https://www.deepmind.com/blog/robocat-a-self-improving-robotic-agent" target="_blank" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-red-600 bg-slate-50 hover:bg-red-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-file-pdf mr-2"></i> PDF</a>
+                                <button onclick="copyBibtex(this)" data-bibtex="@article{bousmalis2023robocat, title={RoboCat: A Self-Improving Foundation Agent for Robotic Manipulation}, author={Bousmalis, Konstantinos and Vezzani, Giulia and Rao, Dushyant and Devin, Coline and Lee, Alex X and Bauza, Maria and Davchev, Todor and Zhou, Yuxiang and Gupta, Agrim and Raju, Akhil and others}, journal={arXiv preprint arXiv:2306.11706}, year={2023}}" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-purple-600 bg-slate-50 hover:bg-purple-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-quote-right mr-2"></i> Copy BibTeX</button>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
-                            RoboCat: A Self-Improving Foundation Agent for Robotic Manipulation
-                        </h3>
-                        <p class="text-slate-600 mb-4 text-sm leading-relaxed">
-                            Konstantinos Bousmalis*, ..., <span class="highlight-author">Yuxiang Zhou*</span>, et al.
-                        </p>
-                        <div class="flex flex-wrap gap-3">
-                            <a href="https://www.deepmind.com/blog/robocat-a-self-improving-robotic-agent" target="_blank" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-red-600 bg-slate-50 hover:bg-red-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-file-pdf mr-2"></i> PDF</a>
-                             <button onclick="copyBibtex(this)" data-bibtex="@article{bousmalis2023robocat, title={RoboCat: A Self-Improving Foundation Agent for Robotic Manipulation}, author={Bousmalis, Konstantinos and Vezzani, Giulia and Rao, Dushyant and Devin, Coline and Lee, Alex X and Bauza, Maria and Davchev, Todor and Zhou, Yuxiang and Gupta, Agrim and Raju, Akhil and others}, journal={arXiv preprint arXiv:2306.11706}, year={2023}}" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-purple-600 bg-slate-50 hover:bg-purple-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-quote-right mr-2"></i> Copy BibTeX</button>
+                        <div class="w-full md:w-72 flex-shrink-0 order-1 md:order-2 mb-2 md:mb-0">
+                            <img src="https://assets-global.website-files.com/621e749a546b7592125f38ed/6491af31af4e56ab852adc12_robocat.webp" class="pub-thumbnail rounded-lg shadow-sm border border-slate-100 w-full h-auto" alt="RoboCat">
                         </div>
                     </div>
                 </div>
@@ -336,19 +353,24 @@
                 <!-- Pub 3: Lossless Adaptation -->
                 <div class="pub-item selected-pub bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden" data-aos="fade-up">
                      <div class="absolute top-0 left-0 w-1 h-full bg-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="flex-1">
-                        <div class="flex items-center gap-3 mb-3">
-                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-indigo-50 text-indigo-600 border border-indigo-100">ICLR 2023</span>
+                    <div class="flex flex-col md:flex-row gap-8 items-start">
+                        <div class="flex-1 order-2 md:order-1">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="px-3 py-1 rounded-full text-xs font-bold bg-indigo-50 text-indigo-600 border border-indigo-100">ICLR 2023</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                                Lossless Adaptation of Pretrained Vision Models For Robotic Manipulation
+                            </h3>
+                            <p class="text-slate-600 mb-4 text-sm leading-relaxed">
+                                Mohit Sharma, Claudio Fantacci, <span class="highlight-author">Yuxiang Zhou</span>, Skanda Koppula, Nicolas Heess, Jon Scholz, Yusuf Aytar
+                            </p>
+                            <div class="flex flex-wrap gap-3">
+                                <a href="https://openreview.net/pdf?id=5IND3TXJRb-" target="_blank" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-red-600 bg-slate-50 hover:bg-red-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-file-pdf mr-2"></i> PDF</a>
+                                <button onclick="copyBibtex(this)" data-bibtex="@article{sharma2023lossless, title={Lossless Adaptation of Pretrained Vision Models For Robotic Manipulation}, author={Sharma, Mohit and Fantacci, Claudio and Zhou, Yuxiang and Koppula, Skanda and Heess, Nicolas and Scholz, Jon and Aytar, Yusuf}, journal={arXiv preprint arXiv:2304.06600}, year={2023}}" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-purple-600 bg-slate-50 hover:bg-purple-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-quote-right mr-2"></i> Copy BibTeX</button>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
-                            Lossless Adaptation of Pretrained Vision Models For Robotic Manipulation
-                        </h3>
-                        <p class="text-slate-600 mb-4 text-sm leading-relaxed">
-                            Mohit Sharma, Claudio Fantacci, <span class="highlight-author">Yuxiang Zhou</span>, Skanda Koppula, Nicolas Heess, Jon Scholz, Yusuf Aytar
-                        </p>
-                        <div class="flex flex-wrap gap-3">
-                            <a href="https://openreview.net/pdf?id=5IND3TXJRb-" target="_blank" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-red-600 bg-slate-50 hover:bg-red-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-file-pdf mr-2"></i> PDF</a>
-                            <button onclick="copyBibtex(this)" data-bibtex="@article{sharma2023lossless, title={Lossless Adaptation of Pretrained Vision Models For Robotic Manipulation}, author={Sharma, Mohit and Fantacci, Claudio and Zhou, Yuxiang and Koppula, Skanda and Heess, Nicolas and Scholz, Jon and Aytar, Yusuf}, journal={arXiv preprint arXiv:2304.06600}, year={2023}}" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-purple-600 bg-slate-50 hover:bg-purple-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-quote-right mr-2"></i> Copy BibTeX</button>
+                        <div class="w-full md:w-72 flex-shrink-0 order-1 md:order-2 mb-2 md:mb-0">
+                            <video src="https://video.twimg.com/tweet_video/Ftrvrd0XoAARezB.mp4" autoplay loop muted playsinline class="pub-thumbnail rounded-lg shadow-sm border border-slate-100 w-full h-auto"></video>
                         </div>
                     </div>
                 </div>
@@ -356,19 +378,24 @@
                 <!-- NEW: How to Spend Your Robot Time -->
                 <div class="pub-item bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden" data-aos="fade-up">
                     <div class="absolute top-0 left-0 w-1 h-full bg-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="flex-1">
-                        <div class="flex items-center gap-3 mb-3">
-                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-indigo-50 text-indigo-600 border border-indigo-100">IROS 2022</span>
+                    <div class="flex flex-col md:flex-row gap-8 items-start">
+                        <div class="flex-1 order-2 md:order-1">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="px-3 py-1 rounded-full text-xs font-bold bg-indigo-50 text-indigo-600 border border-indigo-100">IROS 2022</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                                How to Spend Your Robot Time: Bridging Kickstarting and Offline Reinforcement Learning
+                            </h3>
+                            <p class="text-slate-600 mb-4 text-sm leading-relaxed">
+                                Alex X Lee*, Coline Devin*, Jost Tobias Springenberg*, <span class="highlight-author">Yuxiang Zhou</span>, et al.
+                            </p>
+                            <div class="flex flex-wrap gap-3">
+                                <a href="https://arxiv.org/pdf/2205.03353" target="_blank" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-red-600 bg-slate-50 hover:bg-red-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-file-pdf mr-2"></i> PDF</a>
+                                <button onclick="copyBibtex(this)" data-bibtex="@article{lee2022spend, title={How to Spend Your Robot Time: Bridging Kickstarting and Offline Reinforcement Learning for Vision-based Robotic Manipulation}, author={Lee, Alex X and Devin, Coline and Springenberg, Jost Tobias and Zhou, Yuxiang and Lampe, Thomas and Abdolmaleki, Abbas and Bousmalis, Konstantinos}, journal={arXiv preprint arXiv:2205.03353}, year={2022}}" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-purple-600 bg-slate-50 hover:bg-purple-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-quote-right mr-2"></i> Copy BibTeX</button>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
-                            How to Spend Your Robot Time: Bridging Kickstarting and Offline Reinforcement Learning
-                        </h3>
-                        <p class="text-slate-600 mb-4 text-sm leading-relaxed">
-                            Alex X Lee*, Coline Devin*, Jost Tobias Springenberg*, <span class="highlight-author">Yuxiang Zhou</span>, et al.
-                        </p>
-                        <div class="flex flex-wrap gap-3">
-                            <a href="https://arxiv.org/pdf/2205.03353" target="_blank" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-red-600 bg-slate-50 hover:bg-red-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-file-pdf mr-2"></i> PDF</a>
-                            <button onclick="copyBibtex(this)" data-bibtex="@article{lee2022spend, title={How to Spend Your Robot Time: Bridging Kickstarting and Offline Reinforcement Learning for Vision-based Robotic Manipulation}, author={Lee, Alex X and Devin, Coline and Springenberg, Jost Tobias and Zhou, Yuxiang and Lampe, Thomas and Abdolmaleki, Abbas and Bousmalis, Konstantinos}, journal={arXiv preprint arXiv:2205.03353}, year={2022}}" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-purple-600 bg-slate-50 hover:bg-purple-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-quote-right mr-2"></i> Copy BibTeX</button>
+                        <div class="w-full md:w-72 flex-shrink-0 order-1 md:order-2 mb-2 md:mb-0">
+                            <img src="https://ai2-s2-public.s3.amazonaws.com/figures/2017-08-08/1a0dccf0c831655bd970bb8ba01fe8b93c08512e/1-Figure1-1.png" class="pub-thumbnail rounded-lg shadow-sm border border-slate-100 w-full h-auto" alt="Robot Time">
                         </div>
                     </div>
                 </div>
@@ -376,21 +403,26 @@
                 <!-- Pub 5: Beyond Pick-and-Place -->
                 <div class="pub-item selected-pub bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden" data-aos="fade-up">
                     <div class="absolute top-0 left-0 w-1 h-full bg-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="flex-1">
-                        <div class="flex items-center gap-3 mb-3">
-                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-indigo-50 text-indigo-600 border border-indigo-100">CoRL 2021</span>
+                    <div class="flex flex-col md:flex-row gap-8 items-start">
+                        <div class="flex-1 order-2 md:order-1">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="px-3 py-1 rounded-full text-xs font-bold bg-indigo-50 text-indigo-600 border border-indigo-100">CoRL 2021</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                                Beyond Pick-and-Place: Tackling Robotic Stacking of Diverse Shapes
+                            </h3>
+                            <p class="text-slate-600 mb-4 text-sm leading-relaxed">
+                                Alex X. Lee*, Coline Devin*, <span class="highlight-author">Yuxiang Zhou*</span>, et al.
+                            </p>
+                            <div class="flex flex-wrap gap-3">
+                                <a href="https://deepmind.com/blog/article/stacking-our-way-to-more-general-robots" target="_blank" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-blue-600 bg-slate-50 hover:bg-blue-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-globe mr-2"></i> Web</a>
+                                <a href="https://arxiv.org/abs/2110.06192" target="_blank" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-red-600 bg-slate-50 hover:bg-red-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-file-pdf mr-2"></i> PDF</a>
+                                <a href="https://github.com/deepmind/rgb_stacking" target="_blank" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-slate-900 bg-slate-50 hover:bg-slate-200 px-3 py-2 rounded-lg transition-colors"><i class="fab fa-github mr-2"></i> GitHub</a>
+                                <button onclick="copyBibtex(this)" data-bibtex="@inproceedings{lee2021beyond, title={Beyond Pick-and-Place: Tackling Robotic Stacking of Diverse Shapes}, author={Lee, Alex X and Devin, Coline Manon and Zhou, Yuxiang and Lampe, Thomas and Bousmalis, Konstantinos and Springenberg, Jost Tobias and Byravan, Arunkumar and Abdolmaleki, Abbas and Gileadi, Nimrod and Khosid, David and others}, booktitle={5th Annual Conference on Robot Learning}, year={2021}}" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-purple-600 bg-slate-50 hover:bg-purple-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-quote-right mr-2"></i> Copy BibTeX</button>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
-                            Beyond Pick-and-Place: Tackling Robotic Stacking of Diverse Shapes
-                        </h3>
-                        <p class="text-slate-600 mb-4 text-sm leading-relaxed">
-                            Alex X. Lee*, Coline Devin*, <span class="highlight-author">Yuxiang Zhou*</span>, et al.
-                        </p>
-                        <div class="flex flex-wrap gap-3">
-                            <a href="https://deepmind.com/blog/article/stacking-our-way-to-more-general-robots" target="_blank" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-blue-600 bg-slate-50 hover:bg-blue-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-globe mr-2"></i> Web</a>
-                            <a href="https://arxiv.org/abs/2110.06192" target="_blank" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-red-600 bg-slate-50 hover:bg-red-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-file-pdf mr-2"></i> PDF</a>
-                            <a href="https://github.com/deepmind/rgb_stacking" target="_blank" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-slate-900 bg-slate-50 hover:bg-slate-200 px-3 py-2 rounded-lg transition-colors"><i class="fab fa-github mr-2"></i> GitHub</a>
-                            <button onclick="copyBibtex(this)" data-bibtex="@inproceedings{lee2021beyond, title={Beyond Pick-and-Place: Tackling Robotic Stacking of Diverse Shapes}, author={Lee, Alex X and Devin, Coline Manon and Zhou, Yuxiang and Lampe, Thomas and Bousmalis, Konstantinos and Springenberg, Jost Tobias and Byravan, Arunkumar and Abdolmaleki, Abbas and Gileadi, Nimrod and Khosid, David and others}, booktitle={5th Annual Conference on Robot Learning}, year={2021}}" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-purple-600 bg-slate-50 hover:bg-purple-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-quote-right mr-2"></i> Copy BibTeX</button>
+                        <div class="w-full md:w-72 flex-shrink-0 order-1 md:order-2 mb-2 md:mb-0">
+                            <img src="https://lh3.googleusercontent.com/fIwCn0vKxuIKz7gANsDAbkYr8zqTrbYaNrkVxporSsOkmHjZM-WWmVIjBWo134Zgpyzo33BcnWZncpRC8aF5YBcm08eAxxt1_fNz6zrlbxKDp6g3jA=w1440-rw-v1" class="pub-thumbnail rounded-lg shadow-sm border border-slate-100 w-full h-auto" alt="Stacking">
                         </div>
                     </div>
                 </div>
@@ -398,20 +430,25 @@
                  <!-- Pub 6: Manipulator-Independent -->
                  <div class="pub-item selected-pub bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden" data-aos="fade-up">
                     <div class="absolute top-0 left-0 w-1 h-full bg-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="flex-1">
-                        <div class="flex items-center gap-3 mb-3">
-                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-indigo-50 text-indigo-600 border border-indigo-100">RSS 2021</span>
+                    <div class="flex flex-col md:flex-row gap-8 items-start">
+                        <div class="flex-1 order-2 md:order-1">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="px-3 py-1 rounded-full text-xs font-bold bg-indigo-50 text-indigo-600 border border-indigo-100">RSS 2021</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                                Manipulator-Independent Representations for Visual Imitation
+                            </h3>
+                            <p class="text-slate-600 mb-4 text-sm leading-relaxed">
+                                <span class="highlight-author">Yuxiang Zhou</span>, Yusuf Aytar, Konstantinos Bousmalis
+                            </p>
+                            <div class="flex flex-wrap gap-3">
+                                 <a href="https://sites.google.com/view/mir4vi/home" target="_blank" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-blue-600 bg-slate-50 hover:bg-blue-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-globe mr-2"></i> Web</a>
+                                 <a href="https://arxiv.org/pdf/2103.09016" target="_blank" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-red-600 bg-slate-50 hover:bg-red-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-file-pdf mr-2"></i> PDF</a>
+                                 <button onclick="copyBibtex(this)" data-bibtex="@article{zhou2021manipulator, title={Manipulator-Independent Representations for Visual Imitation}, author={Zhou, Yuxiang and Aytar, Yusuf and Bousmalis, Konstantinos}, journal={arXiv preprint arXiv:2103.09016}, year={2021}}" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-purple-600 bg-slate-50 hover:bg-purple-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-quote-right mr-2"></i> Copy BibTeX</button>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
-                            Manipulator-Independent Representations for Visual Imitation
-                        </h3>
-                        <p class="text-slate-600 mb-4 text-sm leading-relaxed">
-                            <span class="highlight-author">Yuxiang Zhou</span>, Yusuf Aytar, Konstantinos Bousmalis
-                        </p>
-                        <div class="flex flex-wrap gap-3">
-                             <a href="https://sites.google.com/view/mir4vi/home" target="_blank" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-blue-600 bg-slate-50 hover:bg-blue-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-globe mr-2"></i> Web</a>
-                             <a href="https://arxiv.org/pdf/2103.09016" target="_blank" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-red-600 bg-slate-50 hover:bg-red-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-file-pdf mr-2"></i> PDF</a>
-                             <button onclick="copyBibtex(this)" data-bibtex="@article{zhou2021manipulator, title={Manipulator-Independent Representations for Visual Imitation}, author={Zhou, Yuxiang and Aytar, Yusuf and Bousmalis, Konstantinos}, journal={arXiv preprint arXiv:2103.09016}, year={2021}}" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-purple-600 bg-slate-50 hover:bg-purple-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-quote-right mr-2"></i> Copy BibTeX</button>
+                        <div class="w-full md:w-72 flex-shrink-0 order-1 md:order-2 mb-2 md:mb-0">
+                            <img src="https://yuxiang-zhou.github.io/statics/ctg-teaser-small.gif" class="pub-thumbnail rounded-lg shadow-sm border border-slate-100 w-full h-auto" alt="MIR">
                         </div>
                     </div>
                 </div>
@@ -419,19 +456,24 @@
                 <!-- NEW: Learning rich touch representations -->
                 <div class="pub-item bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden" data-aos="fade-up">
                     <div class="absolute top-0 left-0 w-1 h-full bg-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="flex-1">
-                        <div class="flex items-center gap-3 mb-3">
-                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-indigo-50 text-indigo-600 border border-indigo-100">CoRL 2020</span>
+                    <div class="flex flex-col md:flex-row gap-8 items-start">
+                        <div class="flex-1 order-2 md:order-1">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="px-3 py-1 rounded-full text-xs font-bold bg-indigo-50 text-indigo-600 border border-indigo-100">CoRL 2020</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                                Learning rich touch representations through cross-modal self-supervision
+                            </h3>
+                            <p class="text-slate-600 mb-4 text-sm leading-relaxed">
+                                Martina Zambelli, Yusuf Aytar, Francesco Visin, <span class="highlight-author">Yuxiang Zhou</span>, Raia Hadsell
+                            </p>
+                            <div class="flex flex-wrap gap-3">
+                                 <a href="https://arxiv.org/pdf/2101.08616" target="_blank" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-red-600 bg-slate-50 hover:bg-red-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-file-pdf mr-2"></i> PDF</a>
+                                 <button onclick="copyBibtex(this)" data-bibtex="@article{zambelli2021learning, title={Learning rich touch representations through cross-modal self-supervision}, author={Zambelli, Martina and Aytar, Yusuf and Visin, Francesco and Zhou, Yuxiang and Hadsell, Raia}, journal={arXiv preprint arXiv:2101.08616}, year={2021}}" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-purple-600 bg-slate-50 hover:bg-purple-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-quote-right mr-2"></i> Copy BibTeX</button>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
-                            Learning rich touch representations through cross-modal self-supervision
-                        </h3>
-                        <p class="text-slate-600 mb-4 text-sm leading-relaxed">
-                            Martina Zambelli, Yusuf Aytar, Francesco Visin, <span class="highlight-author">Yuxiang Zhou</span>, Raia Hadsell
-                        </p>
-                        <div class="flex flex-wrap gap-3">
-                             <a href="https://arxiv.org/pdf/2101.08616" target="_blank" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-red-600 bg-slate-50 hover:bg-red-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-file-pdf mr-2"></i> PDF</a>
-                             <button onclick="copyBibtex(this)" data-bibtex="@article{zambelli2021learning, title={Learning rich touch representations through cross-modal self-supervision}, author={Zambelli, Martina and Aytar, Yusuf and Visin, Francesco and Zhou, Yuxiang and Hadsell, Raia}, journal={arXiv preprint arXiv:2101.08616}, year={2021}}" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-purple-600 bg-slate-50 hover:bg-purple-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-quote-right mr-2"></i> Copy BibTeX</button>
+                        <div class="w-full md:w-72 flex-shrink-0 order-1 md:order-2 mb-2 md:mb-0">
+                            <img src="https://yuxiang-zhou.github.io/statics/touch.png" class="pub-thumbnail rounded-lg shadow-sm border border-slate-100 w-full h-auto" alt="Touch">
                         </div>
                     </div>
                 </div>
@@ -439,19 +481,24 @@
                 <!-- NEW: Learning Dexterous Manipulation -->
                 <div class="pub-item bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden" data-aos="fade-up">
                     <div class="absolute top-0 left-0 w-1 h-full bg-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="flex-1">
-                        <div class="flex items-center gap-3 mb-3">
-                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-indigo-50 text-indigo-600 border border-indigo-100">CoRL 2020</span>
+                    <div class="flex flex-col md:flex-row gap-8 items-start">
+                        <div class="flex-1 order-2 md:order-1">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="px-3 py-1 rounded-full text-xs font-bold bg-indigo-50 text-indigo-600 border border-indigo-100">CoRL 2020</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                                Learning Dexterous Manipulation from Suboptimal Experts
+                            </h3>
+                            <p class="text-slate-600 mb-4 text-sm leading-relaxed">
+                                Rae Jeong, Jost Tobias Springenberg, ..., <span class="highlight-author">Yuxiang Zhou</span>, et al.
+                            </p>
+                            <div class="flex flex-wrap gap-3">
+                                 <a href="https://arxiv.org/pdf/2010.08587" target="_blank" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-red-600 bg-slate-50 hover:bg-red-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-file-pdf mr-2"></i> PDF</a>
+                                 <button onclick="copyBibtex(this)" data-bibtex="@article{jeong2020learning, title={Learning Dexterous Manipulation from Suboptimal Experts}, author={Jeong, Rae and Springenberg, Jost Tobias and Kay, Jackie and Zheng, Daniel and Zhou, Yuxiang and Galashov, Alexandre and Heess, Nicolas and Nori, Francesco}, journal={arXiv preprint arXiv:2010.08587}, year={2020}}" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-purple-600 bg-slate-50 hover:bg-purple-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-quote-right mr-2"></i> Copy BibTeX</button>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
-                            Learning Dexterous Manipulation from Suboptimal Experts
-                        </h3>
-                        <p class="text-slate-600 mb-4 text-sm leading-relaxed">
-                            Rae Jeong, Jost Tobias Springenberg, ..., <span class="highlight-author">Yuxiang Zhou</span>, et al.
-                        </p>
-                        <div class="flex flex-wrap gap-3">
-                             <a href="https://arxiv.org/pdf/2010.08587" target="_blank" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-red-600 bg-slate-50 hover:bg-red-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-file-pdf mr-2"></i> PDF</a>
-                             <button onclick="copyBibtex(this)" data-bibtex="@article{jeong2020learning, title={Learning Dexterous Manipulation from Suboptimal Experts}, author={Jeong, Rae and Springenberg, Jost Tobias and Kay, Jackie and Zheng, Daniel and Zhou, Yuxiang and Galashov, Alexandre and Heess, Nicolas and Nori, Francesco}, journal={arXiv preprint arXiv:2010.08587}, year={2020}}" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-purple-600 bg-slate-50 hover:bg-purple-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-quote-right mr-2"></i> Copy BibTeX</button>
+                        <div class="w-full md:w-72 flex-shrink-0 order-1 md:order-2 mb-2 md:mb-0">
+                            <img src="https://yuxiang-zhou.github.io/statics/dex.png" class="pub-thumbnail rounded-lg shadow-sm border border-slate-100 w-full h-auto" alt="Dexterous">
                         </div>
                     </div>
                 </div>
@@ -459,19 +506,24 @@
                  <!-- NEW: Self-supervised sim-to-real -->
                  <div class="pub-item bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden" data-aos="fade-up">
                     <div class="absolute top-0 left-0 w-1 h-full bg-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="flex-1">
-                        <div class="flex items-center gap-3 mb-3">
-                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-indigo-50 text-indigo-600 border border-indigo-100">ICRA 2020</span>
+                    <div class="flex flex-col md:flex-row gap-8 items-start">
+                        <div class="flex-1 order-2 md:order-1">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="px-3 py-1 rounded-full text-xs font-bold bg-indigo-50 text-indigo-600 border border-indigo-100">ICRA 2020</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                                Self-supervised sim-to-real adaptation for visual robotic manipulation
+                            </h3>
+                            <p class="text-slate-600 mb-4 text-sm leading-relaxed">
+                                Rae Jeong, Yusuf Aytar, David Khosid, <span class="highlight-author">Yuxiang Zhou</span>, et al.
+                            </p>
+                            <div class="flex flex-wrap gap-3">
+                                 <a href="https://arxiv.org/pdf/1910.09470" target="_blank" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-red-600 bg-slate-50 hover:bg-red-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-file-pdf mr-2"></i> PDF</a>
+                                 <button onclick="copyBibtex(this)" data-bibtex="@inproceedings{jeong2020self, title={Self-supervised sim-to-real adaptation for visual robotic manipulation}, author={Jeong, Rae and Aytar, Yusuf and Khosid, David and Zhou, Yuxiang and Kay, Jackie and Lampe, Thomas and Bousmalis, Konstantinos and Nori, Francesco}, booktitle={2020 IEEE International Conference on Robotics and Automation (ICRA)}, pages={2718--2724}, year={2020}, organization={IEEE}}" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-purple-600 bg-slate-50 hover:bg-purple-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-quote-right mr-2"></i> Copy BibTeX</button>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
-                            Self-supervised sim-to-real adaptation for visual robotic manipulation
-                        </h3>
-                        <p class="text-slate-600 mb-4 text-sm leading-relaxed">
-                            Rae Jeong, Yusuf Aytar, David Khosid, <span class="highlight-author">Yuxiang Zhou</span>, et al.
-                        </p>
-                        <div class="flex flex-wrap gap-3">
-                             <a href="https://arxiv.org/pdf/1910.09470" target="_blank" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-red-600 bg-slate-50 hover:bg-red-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-file-pdf mr-2"></i> PDF</a>
-                             <button onclick="copyBibtex(this)" data-bibtex="@inproceedings{jeong2020self, title={Self-supervised sim-to-real adaptation for visual robotic manipulation}, author={Jeong, Rae and Aytar, Yusuf and Khosid, David and Zhou, Yuxiang and Kay, Jackie and Lampe, Thomas and Bousmalis, Konstantinos and Nori, Francesco}, booktitle={2020 IEEE International Conference on Robotics and Automation (ICRA)}, pages={2718--2724}, year={2020}, organization={IEEE}}" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-purple-600 bg-slate-50 hover:bg-purple-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-quote-right mr-2"></i> Copy BibTeX</button>
+                        <div class="w-full md:w-72 flex-shrink-0 order-1 md:order-2 mb-2 md:mb-0">
+                            <img src="https://yuxiang-zhou.github.io/statics/s3r.png" class="pub-thumbnail rounded-lg shadow-sm border border-slate-100 w-full h-auto" alt="Sim-to-Real">
                         </div>
                     </div>
                 </div>
@@ -479,209 +531,264 @@
                  <!-- Pub: RetinaFace -->
                  <div class="pub-item selected-pub bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden" data-aos="fade-up">
                     <div class="absolute top-0 left-0 w-1 h-full bg-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="flex-1">
-                        <div class="flex items-center gap-3 mb-3">
-                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-indigo-50 text-indigo-600 border border-indigo-100">CVPR 2020</span>
+                    <div class="flex flex-col md:flex-row gap-8 items-start">
+                        <div class="flex-1 order-2 md:order-1">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="px-3 py-1 rounded-full text-xs font-bold bg-indigo-50 text-indigo-600 border border-indigo-100">CVPR 2020</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                                RetinaFace: Single-stage dense face localisation in the wild
+                            </h3>
+                            <p class="text-slate-600 mb-4 text-sm leading-relaxed">
+                                Jiankang Deng, Jia Guo, <span class="highlight-author">Yuxiang Zhou</span>, Jinke Yu, Irene Kotsia, Stefanos Zafeiriou
+                            </p>
+                            <div class="flex flex-wrap gap-3">
+                                <a href="https://arxiv.org/pdf/1905.00641" target="_blank" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-red-600 bg-slate-50 hover:bg-red-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-file-pdf mr-2"></i> PDF</a>
+                                <button onclick="copyBibtex(this)" data-bibtex="@article{deng2019retinaface, title={Retinaface: Single-stage dense face localisation in the wild}, author={Deng, Jiankang and Guo, Jia and Zhou, Yuxiang and Yu, Jinke and Kotsia, Irene and Zafeiriou, Stefanos}, journal={arXiv preprint arXiv:1905.00641}, year={2019}}" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-purple-600 bg-slate-50 hover:bg-purple-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-quote-right mr-2"></i> Copy BibTeX</button>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
-                            RetinaFace: Single-stage dense face localisation in the wild
-                        </h3>
-                        <p class="text-slate-600 mb-4 text-sm leading-relaxed">
-                            Jiankang Deng, Jia Guo, <span class="highlight-author">Yuxiang Zhou</span>, Jinke Yu, Irene Kotsia, Stefanos Zafeiriou
-                        </p>
-                        <div class="flex flex-wrap gap-3">
-                            <a href="https://arxiv.org/pdf/1905.00641" target="_blank" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-red-600 bg-slate-50 hover:bg-red-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-file-pdf mr-2"></i> PDF</a>
-                            <button onclick="copyBibtex(this)" data-bibtex="@article{deng2019retinaface, title={Retinaface: Single-stage dense face localisation in the wild}, author={Deng, Jiankang and Guo, Jia and Zhou, Yuxiang and Yu, Jinke and Kotsia, Irene and Zafeiriou, Stefanos}, journal={arXiv preprint arXiv:1905.00641}, year={2019}}" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-purple-600 bg-slate-50 hover:bg-purple-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-quote-right mr-2"></i> Copy BibTeX</button>
+                        <div class="w-full md:w-72 flex-shrink-0 order-1 md:order-2 mb-2 md:mb-0">
+                            <img src="https://yuxiang-zhou.github.io/statics/retaina_face.png" class="pub-thumbnail rounded-lg shadow-sm border border-slate-100 w-full h-auto" alt="RetinaFace">
                         </div>
                     </div>
                 </div>
 
                 <!-- NEW: Meshgan -->
                 <div class="pub-item bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden" data-aos="fade-up">
-                    <div class="flex-1">
-                        <div class="flex items-center gap-3 mb-3">
-                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-gray-100 text-gray-600">Arxiv 2019</span>
+                    <div class="flex flex-col md:flex-row gap-8 items-start">
+                        <div class="flex-1 order-2 md:order-1">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="px-3 py-1 rounded-full text-xs font-bold bg-gray-100 text-gray-600">Arxiv 2019</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                                MeshGAN: Non-linear 3D Morphable Models of Faces
+                            </h3>
+                            <p class="text-slate-600 mb-4 text-sm leading-relaxed">
+                                Shiyang Cheng, Michael Bronstein, <span class="highlight-author">Yuxiang Zhou</span>, et al.
+                            </p>
+                            <div class="flex flex-wrap gap-3">
+                                <a href="https://arxiv.org/pdf/1903.10384" target="_blank" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-red-600 bg-slate-50 hover:bg-red-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-file-pdf mr-2"></i> PDF</a>
+                                <button onclick="copyBibtex(this)" data-bibtex="@article{cheng2019meshgan, title={Meshgan: Non-linear 3d morphable models of faces}, author={Cheng, Shiyang and Bronstein, Michael and Zhou, Yuxiang and Kotsia, Irene and Pantic, Maja and Zafeiriou, Stefanos}, journal={arXiv preprint arXiv:1903.10384}, year={2019}}" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-purple-600 bg-slate-50 hover:bg-purple-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-quote-right mr-2"></i> Copy BibTeX</button>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
-                            MeshGAN: Non-linear 3D Morphable Models of Faces
-                        </h3>
-                        <p class="text-slate-600 mb-4 text-sm leading-relaxed">
-                            Shiyang Cheng, Michael Bronstein, <span class="highlight-author">Yuxiang Zhou</span>, et al.
-                        </p>
-                        <div class="flex flex-wrap gap-3">
-                            <a href="https://arxiv.org/pdf/1903.10384" target="_blank" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-red-600 bg-slate-50 hover:bg-red-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-file-pdf mr-2"></i> PDF</a>
-                            <button onclick="copyBibtex(this)" data-bibtex="@article{cheng2019meshgan, title={Meshgan: Non-linear 3d morphable models of faces}, author={Cheng, Shiyang and Bronstein, Michael and Zhou, Yuxiang and Kotsia, Irene and Pantic, Maja and Zafeiriou, Stefanos}, journal={arXiv preprint arXiv:1903.10384}, year={2019}}" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-purple-600 bg-slate-50 hover:bg-purple-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-quote-right mr-2"></i> Copy BibTeX</button>
+                        <div class="w-full md:w-72 flex-shrink-0 order-1 md:order-2 mb-2 md:mb-0">
+                            <img src="https://yuxiang-zhou.github.io/statics/meshgan.png" class="pub-thumbnail rounded-lg shadow-sm border border-slate-100 w-full h-auto" alt="MeshGAN">
                         </div>
                     </div>
                 </div>
 
                 <!-- Pub: Dense 3d -->
                  <div class="pub-item bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden" data-aos="fade-up">
-                    <div class="flex-1">
-                        <div class="flex items-center gap-3 mb-3">
-                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-slate-100 text-slate-600">CVPR 2019</span>
+                    <div class="flex flex-col md:flex-row gap-8 items-start">
+                        <div class="flex-1 order-2 md:order-1">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="px-3 py-1 rounded-full text-xs font-bold bg-slate-100 text-slate-600">CVPR 2019</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                                Dense 3d face decoding over 2500fps: Joint texture & shape convolutional mesh decoders
+                            </h3>
+                            <p class="text-slate-600 mb-4 text-sm leading-relaxed">
+                                <span class="highlight-author">Yuxiang Zhou</span>, Jiankang Deng, Irene Kotsia, Stefanos Zafeiriou
+                            </p>
+                            <div class="flex flex-wrap gap-3">
+                                <a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Zhou_Dense_3D_Face_Decoding_Over_2500FPS_Joint_Texture__Shape_CVPR_2019_paper.pdf" target="_blank" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-red-600 bg-slate-50 hover:bg-red-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-file-pdf mr-2"></i> PDF</a>
+                                <button onclick="copyBibtex(this)" data-bibtex="@inproceedings{zhou2019dense, title={Dense 3d face decoding over 2500fps: Joint texture \& shape convolutional mesh decoders}, author={Zhou, Yuxiang and Deng, Jiankang and Kotsia, Irene and Zafeiriou, Stefanos}, booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}, pages={1097--1106}, year={2019}}" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-purple-600 bg-slate-50 hover:bg-purple-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-quote-right mr-2"></i> Copy BibTeX</button>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
-                            Dense 3d face decoding over 2500fps: Joint texture & shape convolutional mesh decoders
-                        </h3>
-                        <p class="text-slate-600 mb-4 text-sm leading-relaxed">
-                            <span class="highlight-author">Yuxiang Zhou</span>, Jiankang Deng, Irene Kotsia, Stefanos Zafeiriou
-                        </p>
-                        <div class="flex flex-wrap gap-3">
-                            <a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Zhou_Dense_3D_Face_Decoding_Over_2500FPS_Joint_Texture__Shape_CVPR_2019_paper.pdf" target="_blank" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-red-600 bg-slate-50 hover:bg-red-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-file-pdf mr-2"></i> PDF</a>
-                            <button onclick="copyBibtex(this)" data-bibtex="@inproceedings{zhou2019dense, title={Dense 3d face decoding over 2500fps: Joint texture \& shape convolutional mesh decoders}, author={Zhou, Yuxiang and Deng, Jiankang and Kotsia, Irene and Zafeiriou, Stefanos}, booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}, pages={1097--1106}, year={2019}}" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-purple-600 bg-slate-50 hover:bg-purple-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-quote-right mr-2"></i> Copy BibTeX</button>
+                        <div class="w-full md:w-72 flex-shrink-0 order-1 md:order-2 mb-2 md:mb-0">
+                            <img src="https://yuxiang-zhou.github.io/statics/cmd.png" class="pub-thumbnail rounded-lg shadow-sm border border-slate-100 w-full h-auto" alt="Dense 3D">
                         </div>
                     </div>
                 </div>
 
                 <!-- Pub: UV-GAN -->
                 <div class="pub-item bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden" data-aos="fade-up">
-                    <div class="flex-1">
-                        <div class="flex items-center gap-3 mb-3">
-                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-slate-100 text-slate-600">CVPR 2018</span>
+                    <div class="flex flex-col md:flex-row gap-8 items-start">
+                        <div class="flex-1 order-2 md:order-1">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="px-3 py-1 rounded-full text-xs font-bold bg-slate-100 text-slate-600">CVPR 2018</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                                UV-GAN: Adversarial Facial UV Map Completion for Pose-invariant Face Recognition
+                            </h3>
+                            <p class="text-slate-600 mb-4 text-sm leading-relaxed">
+                                Jiankang Deng, Shiyang Cheng, Niannan Xue, <span class="highlight-author">Yuxiang Zhou</span>, Stefanos Zafeiriou
+                            </p>
+                             <div class="flex flex-wrap gap-3">
+                                <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Deng_UV-GAN_Adversarial_Facial_CVPR_2018_paper.pdf" target="_blank" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-red-600 bg-slate-50 hover:bg-red-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-file-pdf mr-2"></i> PDF</a>
+                                <button onclick="copyBibtex(this)" data-bibtex="@inproceedings{deng2018uv, title={Uv-gan: Adversarial facial uv map completion for pose-invariant face recognition}, author={Deng, Jiankang and Cheng, Shiyang and Xue, Niannan and Zhou, Yuxiang and Zafeiriou, Stefanos}, booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition}, pages={7093--7102}, year={2018}}" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-purple-600 bg-slate-50 hover:bg-purple-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-quote-right mr-2"></i> Copy BibTeX</button>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
-                            UV-GAN: Adversarial Facial UV Map Completion for Pose-invariant Face Recognition
-                        </h3>
-                        <p class="text-slate-600 mb-4 text-sm leading-relaxed">
-                            Jiankang Deng, Shiyang Cheng, Niannan Xue, <span class="highlight-author">Yuxiang Zhou</span>, Stefanos Zafeiriou
-                        </p>
-                         <div class="flex flex-wrap gap-3">
-                            <a href="http://openaccess.thecvf.com/content_cvpr_2018/papers/Deng_UV-GAN_Adversarial_Facial_CVPR_2018_paper.pdf" target="_blank" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-red-600 bg-slate-50 hover:bg-red-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-file-pdf mr-2"></i> PDF</a>
-                            <button onclick="copyBibtex(this)" data-bibtex="@inproceedings{deng2018uv, title={Uv-gan: Adversarial facial uv map completion for pose-invariant face recognition}, author={Deng, Jiankang and Cheng, Shiyang and Xue, Niannan and Zhou, Yuxiang and Zafeiriou, Stefanos}, booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition}, pages={7093--7102}, year={2018}}" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-purple-600 bg-slate-50 hover:bg-purple-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-quote-right mr-2"></i> Copy BibTeX</button>
+                        <div class="w-full md:w-72 flex-shrink-0 order-1 md:order-2 mb-2 md:mb-0">
+                            <img src="https://yuxiang-zhou.github.io/statics/uv-gan.png" class="pub-thumbnail rounded-lg shadow-sm border border-slate-100 w-full h-auto" alt="UV-GAN">
                         </div>
                     </div>
                 </div>
 
                 <!-- NEW: FG 2018 - Improve Accurate Pose -->
                 <div class="pub-item bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden" data-aos="fade-up">
-                    <div class="flex-1">
-                        <div class="flex items-center gap-3 mb-3">
-                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-slate-100 text-slate-600">FG 2018</span>
+                    <div class="flex flex-col md:flex-row gap-8 items-start">
+                        <div class="flex-1 order-2 md:order-1">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="px-3 py-1 rounded-full text-xs font-bold bg-slate-100 text-slate-600">FG 2018</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                                Improve Accurate Pose Alignment and Action Localization by Dense Pose Estimation
+                            </h3>
+                            <p class="text-slate-600 mb-4 text-sm leading-relaxed">
+                                <span class="highlight-author">Yuxiang Zhou</span>, Jiankang Deng, Stefanos Zafeiriou
+                            </p>
+                             <div class="flex flex-wrap gap-3">
+                                <a href="https://spiral.imperial.ac.uk/bitstream/10044/1/71006/2/fg2018_dc_paper_8.1.pdf" target="_blank" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-red-600 bg-slate-50 hover:bg-red-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-file-pdf mr-2"></i> PDF</a>
+                                <button onclick="copyBibtex(this)" data-bibtex="@inproceedings{zhou2018improve, title={Improve accurate pose alignment and action localization by dense pose estimation}, author={Zhou, Yuxiang and Deng, Jiankang and Zafeiriou, Stefanos}, booktitle={2018 13th IEEE International Conference on Automatic Face \& Gesture Recognition (FG 2018)}, pages={480--484}, year={2018}, organization={IEEE}}" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-purple-600 bg-slate-50 hover:bg-purple-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-quote-right mr-2"></i> Copy BibTeX</button>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
-                            Improve Accurate Pose Alignment and Action Localization by Dense Pose Estimation
-                        </h3>
-                        <p class="text-slate-600 mb-4 text-sm leading-relaxed">
-                            <span class="highlight-author">Yuxiang Zhou</span>, Jiankang Deng, Stefanos Zafeiriou
-                        </p>
-                         <div class="flex flex-wrap gap-3">
-                            <a href="https://spiral.imperial.ac.uk/bitstream/10044/1/71006/2/fg2018_dc_paper_8.1.pdf" target="_blank" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-red-600 bg-slate-50 hover:bg-red-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-file-pdf mr-2"></i> PDF</a>
-                            <button onclick="copyBibtex(this)" data-bibtex="@inproceedings{zhou2018improve, title={Improve accurate pose alignment and action localization by dense pose estimation}, author={Zhou, Yuxiang and Deng, Jiankang and Zafeiriou, Stefanos}, booktitle={2018 13th IEEE International Conference on Automatic Face \& Gesture Recognition (FG 2018)}, pages={480--484}, year={2018}, organization={IEEE}}" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-purple-600 bg-slate-50 hover:bg-purple-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-quote-right mr-2"></i> Copy BibTeX</button>
+                        <div class="w-full md:w-72 flex-shrink-0 order-1 md:order-2 mb-2 md:mb-0">
+                            <img src="https://yuxiang-zhou.github.io/statics/fg-2018-pose.png" class="pub-thumbnail rounded-lg shadow-sm border border-slate-100 w-full h-auto" alt="Pose">
                         </div>
                     </div>
                 </div>
 
                 <!-- NEW: FG 2018 - Cascade -->
                 <div class="pub-item bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden" data-aos="fade-up">
-                    <div class="flex-1">
-                        <div class="flex items-center gap-3 mb-3">
-                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-slate-100 text-slate-600">FG 2018</span>
+                    <div class="flex flex-col md:flex-row gap-8 items-start">
+                        <div class="flex-1 order-2 md:order-1">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="px-3 py-1 rounded-full text-xs font-bold bg-slate-100 text-slate-600">FG 2018</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                                Cascade Multi-view Hourglass Model for Robust 3D Face Alignment
+                            </h3>
+                            <p class="text-slate-600 mb-4 text-sm leading-relaxed">
+                                Jiankang Deng, <span class="highlight-author">Yuxiang Zhou</span>, Shiyang Cheng, Stefanos Zaferiou
+                            </p>
+                             <div class="flex flex-wrap gap-3">
+                                <a href="https://drive.google.com/file/d/1r7oeJhS84Of_GLA0lUOpAVN5xNW_Ta8b/view" target="_blank" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-red-600 bg-slate-50 hover:bg-red-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-file-pdf mr-2"></i> PDF</a>
+                                <button onclick="copyBibtex(this)" data-bibtex="@inproceedings{deng2018cascade, title={Cascade multi-view hourglass model for robust 3d face alignment}, author={Deng, Jiankang and Zhou, Yuxiang and Cheng, Shiyang and Zaferiou, Stefanos}, booktitle={2018 13th IEEE International Conference on Automatic Face \& Gesture Recognition (FG 2018)}, pages={399--403}, year={2018}, organization={IEEE}}" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-purple-600 bg-slate-50 hover:bg-purple-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-quote-right mr-2"></i> Copy BibTeX</button>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
-                            Cascade Multi-view Hourglass Model for Robust 3D Face Alignment
-                        </h3>
-                        <p class="text-slate-600 mb-4 text-sm leading-relaxed">
-                            Jiankang Deng, <span class="highlight-author">Yuxiang Zhou</span>, Shiyang Cheng, Stefanos Zaferiou
-                        </p>
-                         <div class="flex flex-wrap gap-3">
-                            <a href="https://drive.google.com/file/d/1r7oeJhS84Of_GLA0lUOpAVN5xNW_Ta8b/view" target="_blank" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-red-600 bg-slate-50 hover:bg-red-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-file-pdf mr-2"></i> PDF</a>
-                            <button onclick="copyBibtex(this)" data-bibtex="@inproceedings{deng2018cascade, title={Cascade multi-view hourglass model for robust 3d face alignment}, author={Deng, Jiankang and Zhou, Yuxiang and Cheng, Shiyang and Zaferiou, Stefanos}, booktitle={2018 13th IEEE International Conference on Automatic Face \& Gesture Recognition (FG 2018)}, pages={399--403}, year={2018}, organization={IEEE}}" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-purple-600 bg-slate-50 hover:bg-purple-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-quote-right mr-2"></i> Copy BibTeX</button>
+                        <div class="w-full md:w-72 flex-shrink-0 order-1 md:order-2 mb-2 md:mb-0">
+                            <img src="https://yuxiang-zhou.github.io/statics/fg-2018-multiview.png" class="pub-thumbnail rounded-lg shadow-sm border border-slate-100 w-full h-auto" alt="Multi-view">
                         </div>
                     </div>
                 </div>
 
                 <!-- NEW: IEEE TIP 2017 -->
                 <div class="pub-item bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden" data-aos="fade-up">
-                    <div class="flex-1">
-                        <div class="flex items-center gap-3 mb-3">
-                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-slate-100 text-slate-600">IEEE TIP 2017</span>
+                    <div class="flex flex-col md:flex-row gap-8 items-start">
+                        <div class="flex-1 order-2 md:order-1">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="px-3 py-1 rounded-full text-xs font-bold bg-slate-100 text-slate-600">IEEE TIP 2017</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                                Joint Multi-view Face Alignment in the Wild
+                            </h3>
+                            <p class="text-slate-600 mb-4 text-sm leading-relaxed">
+                                Jiankang Deng, George Trigeorgis, <span class="highlight-author">Yuxiang Zhou</span>, Stefanos Zafeiriou
+                            </p>
+                             <div class="flex flex-wrap gap-3">
+                                <a href="https://arxiv.org/pdf/1708.06023" target="_blank" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-red-600 bg-slate-50 hover:bg-red-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-file-pdf mr-2"></i> PDF</a>
+                                <button onclick="copyBibtex(this)" data-bibtex="@article{deng2019joint, title={Joint multi-view face alignment in the wild}, author={Deng, Jiankang and Trigeorgis, George and Zhou, Yuxiang and Zafeiriou, Stefanos}, journal={IEEE Transactions on Image Processing}, volume={28}, number={7}, pages={3636--3648}, year={2019}, publisher={IEEE}}" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-purple-600 bg-slate-50 hover:bg-purple-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-quote-right mr-2"></i> Copy BibTeX</button>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
-                            Joint Multi-view Face Alignment in the Wild
-                        </h3>
-                        <p class="text-slate-600 mb-4 text-sm leading-relaxed">
-                            Jiankang Deng, George Trigeorgis, <span class="highlight-author">Yuxiang Zhou</span>, Stefanos Zafeiriou
-                        </p>
-                         <div class="flex flex-wrap gap-3">
-                            <a href="https://arxiv.org/pdf/1708.06023" target="_blank" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-red-600 bg-slate-50 hover:bg-red-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-file-pdf mr-2"></i> PDF</a>
-                            <button onclick="copyBibtex(this)" data-bibtex="@article{deng2019joint, title={Joint multi-view face alignment in the wild}, author={Deng, Jiankang and Trigeorgis, George and Zhou, Yuxiang and Zafeiriou, Stefanos}, journal={IEEE Transactions on Image Processing}, volume={28}, number={7}, pages={3636--3648}, year={2019}, publisher={IEEE}}" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-purple-600 bg-slate-50 hover:bg-purple-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-quote-right mr-2"></i> Copy BibTeX</button>
+                        <div class="w-full md:w-72 flex-shrink-0 order-1 md:order-2 mb-2 md:mb-0">
+                            <img src="https://yuxiang-zhou.github.io/statics/MHM.png" class="pub-thumbnail rounded-lg shadow-sm border border-slate-100 w-full h-auto" alt="MHM">
                         </div>
                     </div>
                 </div>
 
                 <!-- NEW: Marginal Loss -->
                 <div class="pub-item bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden" data-aos="fade-up">
-                    <div class="flex-1">
-                        <div class="flex items-center gap-3 mb-3">
-                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-slate-100 text-slate-600">CVPRW 2017</span>
+                    <div class="flex flex-col md:flex-row gap-8 items-start">
+                        <div class="flex-1 order-2 md:order-1">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="px-3 py-1 rounded-full text-xs font-bold bg-slate-100 text-slate-600">CVPRW 2017</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                                Marginal Loss for Deep Face Recognition
+                            </h3>
+                            <p class="text-slate-600 mb-4 text-sm leading-relaxed">
+                                Jiankang Deng, <span class="highlight-author">Yuxiang Zhou</span>, Stefanos Zafeiriou
+                            </p>
+                             <div class="flex flex-wrap gap-3">
+                                <a href="http://openaccess.thecvf.com/content_cvpr_2017_workshops/w33/papers/Deng_Marginal_Loss_for_CVPR_2017_paper.pdf" target="_blank" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-red-600 bg-slate-50 hover:bg-red-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-file-pdf mr-2"></i> PDF</a>
+                                <button onclick="copyBibtex(this)" data-bibtex="@inproceedings{deng2017marginal, title={Marginal loss for deep face recognition}, author={Deng, Jiankang and Zhou, Yuxiang and Zafeiriou, Stefanos}, booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition Workshops}, pages={60--68}, year={2017}}" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-purple-600 bg-slate-50 hover:bg-purple-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-quote-right mr-2"></i> Copy BibTeX</button>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
-                            Marginal Loss for Deep Face Recognition
-                        </h3>
-                        <p class="text-slate-600 mb-4 text-sm leading-relaxed">
-                            Jiankang Deng, <span class="highlight-author">Yuxiang Zhou</span>, Stefanos Zafeiriou
-                        </p>
-                         <div class="flex flex-wrap gap-3">
-                            <a href="http://openaccess.thecvf.com/content_cvpr_2017_workshops/w33/papers/Deng_Marginal_Loss_for_CVPR_2017_paper.pdf" target="_blank" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-red-600 bg-slate-50 hover:bg-red-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-file-pdf mr-2"></i> PDF</a>
-                            <button onclick="copyBibtex(this)" data-bibtex="@inproceedings{deng2017marginal, title={Marginal loss for deep face recognition}, author={Deng, Jiankang and Zhou, Yuxiang and Zafeiriou, Stefanos}, booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition Workshops}, pages={60--68}, year={2017}}" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-purple-600 bg-slate-50 hover:bg-purple-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-quote-right mr-2"></i> Copy BibTeX</button>
+                        <div class="w-full md:w-72 flex-shrink-0 order-1 md:order-2 mb-2 md:mb-0">
+                            <img src="https://yuxiang-zhou.github.io/statics/marginal_loss.png" class="pub-thumbnail rounded-lg shadow-sm border border-slate-100 w-full h-auto" alt="Marginal Loss">
                         </div>
                     </div>
                 </div>
                 
                 <!-- Pub: Estimating Correspondences -->
                 <div class="pub-item bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden" data-aos="fade-up">
-                    <div class="flex-1">
-                        <div class="flex items-center gap-3 mb-3">
-                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-slate-100 text-slate-600">CVPR 2016</span>
+                    <div class="flex flex-col md:flex-row gap-8 items-start">
+                        <div class="flex-1 order-2 md:order-1">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="px-3 py-1 rounded-full text-xs font-bold bg-slate-100 text-slate-600">CVPR 2016</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                                Estimating Correspondences of Deformable Objects "In-the-wild"
+                            </h3>
+                            <p class="text-slate-600 mb-4 text-sm leading-relaxed">
+                                <span class="highlight-author">Yuxiang Zhou</span>, Epameinondas Antonakos, Anastasios Roussos, Stefanos Zafeiriou
+                            </p>
+                             <div class="flex flex-wrap gap-3">
+                                <a href="https://openaccess.thecvf.com/content_cvpr_2016/papers/Zhou_Estimating_Correspondences_of_CVPR_2016_paper.pdf" target="_blank" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-red-600 bg-slate-50 hover:bg-red-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-file-pdf mr-2"></i> PDF</a>
+                                <button onclick="copyBibtex(this)" data-bibtex="@inproceedings{zhou2016estimating, title={Estimating correspondences of deformable objects 'in-the-wild'}, author={Zhou, Yuxiang and Antonakos, Epameinondas and Alabort-i-Medina, Joan and Roussos, Anastasios and Zafeiriou, Stefanos}, booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition}, pages={5791--5801}, year={2016}}" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-purple-600 bg-slate-50 hover:bg-purple-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-quote-right mr-2"></i> Copy BibTeX</button>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
-                            Estimating Correspondences of Deformable Objects "In-the-wild"
-                        </h3>
-                        <p class="text-slate-600 mb-4 text-sm leading-relaxed">
-                            <span class="highlight-author">Yuxiang Zhou</span>, Epameinondas Antonakos, Anastasios Roussos, Stefanos Zafeiriou
-                        </p>
-                         <div class="flex flex-wrap gap-3">
-                            <a href="https://openaccess.thecvf.com/content_cvpr_2016/papers/Zhou_Estimating_Correspondences_of_CVPR_2016_paper.pdf" target="_blank" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-red-600 bg-slate-50 hover:bg-red-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-file-pdf mr-2"></i> PDF</a>
-                            <button onclick="copyBibtex(this)" data-bibtex="@inproceedings{zhou2016estimating, title={Estimating correspondences of deformable objects 'in-the-wild'}, author={Zhou, Yuxiang and Antonakos, Epameinondas and Alabort-i-Medina, Joan and Roussos, Anastasios and Zafeiriou, Stefanos}, booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition}, pages={5791--5801}, year={2016}}" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-purple-600 bg-slate-50 hover:bg-purple-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-quote-right mr-2"></i> Copy BibTeX</button>
+                        <div class="w-full md:w-72 flex-shrink-0 order-1 md:order-2 mb-2 md:mb-0">
+                            <img src="https://yuxiang-zhou.github.io/statics/shapeflow.png" class="pub-thumbnail rounded-lg shadow-sm border border-slate-100 w-full h-auto" alt="Shape Flow">
                         </div>
                     </div>
                 </div>
 
                 <!-- NEW: ICASSP 2016 -->
                 <div class="pub-item bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden" data-aos="fade-up">
-                    <div class="flex-1">
-                        <div class="flex items-center gap-3 mb-3">
-                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-slate-100 text-slate-600">ICASSP 2016</span>
+                    <div class="flex flex-col md:flex-row gap-8 items-start">
+                        <div class="flex-1 order-2 md:order-1">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="px-3 py-1 rounded-full text-xs font-bold bg-slate-100 text-slate-600">ICASSP 2016</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                                Semi-autonomous Data Enrichment Based on Cross-task Labelling of Missing Targets for Holistic Speech Analysis
+                            </h3>
+                            <p class="text-slate-600 mb-4 text-sm leading-relaxed">
+                                Yue Zhang, <span class="highlight-author">Yuxiang Zhou</span>, Jie Shen, Björn Schuller
+                            </p>
+                             <div class="flex flex-wrap gap-3">
+                                <a href="https://ibug.doc.ic.ac.uk/media/uploads/documents/zhang16-sde.pdf" target="_blank" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-blue-600 bg-slate-50 hover:bg-blue-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-file-pdf mr-2"></i> PDF</a>
+                                <button onclick="copyBibtex(this)" data-bibtex="@inproceedings{zhang2016semi, title={Semi-autonomous data enrichment based on cross-task labelling of missing targets for holistic speech analysis}, author={Zhang, Yue and Zhou, Yuxiang and Shen, Jie and Schuller, Bj{\"o}rn}, booktitle={2016 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, pages={6090--6094}, year={2016}, organization={IEEE}}" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-purple-600 bg-slate-50 hover:bg-purple-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-quote-right mr-2"></i> Copy BibTeX</button>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
-                            Semi-autonomous Data Enrichment Based on Cross-task Labelling of Missing Targets for Holistic Speech Analysis
-                        </h3>
-                        <p class="text-slate-600 mb-4 text-sm leading-relaxed">
-                            Yue Zhang, <span class="highlight-author">Yuxiang Zhou</span>, Jie Shen, Björn Schuller
-                        </p>
-                         <div class="flex flex-wrap gap-3">
-                            <a href="https://ibug.doc.ic.ac.uk/media/uploads/documents/zhang16-sde.pdf" target="_blank" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-blue-600 bg-slate-50 hover:bg-blue-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-file-pdf mr-2"></i> PDF</a>
-                            <button onclick="copyBibtex(this)" data-bibtex="@inproceedings{zhang2016semi, title={Semi-autonomous data enrichment based on cross-task labelling of missing targets for holistic speech analysis}, author={Zhang, Yue and Zhou, Yuxiang and Shen, Jie and Schuller, Bj{\"o}rn}, booktitle={2016 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, pages={6090--6094}, year={2016}, organization={IEEE}}" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-purple-600 bg-slate-50 hover:bg-purple-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-quote-right mr-2"></i> Copy BibTeX</button>
+                        <div class="w-full md:w-72 flex-shrink-0 order-1 md:order-2 mb-2 md:mb-0">
+                            <img src="https://yuxiang-zhou.github.io/statics/speechanalysis.png" class="pub-thumbnail rounded-lg shadow-sm border border-slate-100 w-full h-auto" alt="Speech Analysis">
                         </div>
                     </div>
                 </div>
 
                 <!-- NEW: QSIC 2012 -->
                 <div class="pub-item bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden" data-aos="fade-up">
-                    <div class="flex-1">
-                        <div class="flex items-center gap-3 mb-3">
-                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-slate-100 text-slate-600">QSIC 2012</span>
+                    <div class="flex flex-col md:flex-row gap-8 items-start">
+                        <div class="flex-1 order-2 md:order-1">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="px-3 py-1 rounded-full text-xs font-bold bg-slate-100 text-slate-600">QSIC 2012</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                                Fingertips Detection Algorithm Based on Skin Colour Filtering and Distance Transformation
+                            </h3>
+                            <p class="text-slate-600 mb-4 text-sm leading-relaxed">
+                                Yun Liao, <span class="highlight-author">Yuxiang Zhou</span>, Hua Zhou, Zhihong Liang
+                            </p>
+                             <div class="flex flex-wrap gap-3">
+                                <a href="https://ieeexplore.ieee.org/abstract/document/6319261/" target="_blank" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-blue-600 bg-slate-50 hover:bg-blue-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-external-link-alt mr-2"></i> IEEE</a>
+                                <button onclick="copyBibtex(this)" data-bibtex="@inproceedings{liao2012fingertips, title={Fingertips detection algorithm based on skin colour filtering and distance transformation}, author={Liao, Yun and Zhou, Yuxiang and Zhou, Hua and Liang, Zhihong}, booktitle={2012 12th International Conference on Quality Software}, pages={276--281}, year={2012}, organization={IEEE}}" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-purple-600 bg-slate-50 hover:bg-purple-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-quote-right mr-2"></i> Copy BibTeX</button>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
-                            Fingertips Detection Algorithm Based on Skin Colour Filtering and Distance Transformation
-                        </h3>
-                        <p class="text-slate-600 mb-4 text-sm leading-relaxed">
-                            Yun Liao, <span class="highlight-author">Yuxiang Zhou</span>, Hua Zhou, Zhihong Liang
-                        </p>
-                         <div class="flex flex-wrap gap-3">
-                            <a href="https://ieeexplore.ieee.org/abstract/document/6319261/" target="_blank" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-blue-600 bg-slate-50 hover:bg-blue-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-external-link-alt mr-2"></i> IEEE</a>
-                            <button onclick="copyBibtex(this)" data-bibtex="@inproceedings{liao2012fingertips, title={Fingertips detection algorithm based on skin colour filtering and distance transformation}, author={Liao, Yun and Zhou, Yuxiang and Zhou, Hua and Liang, Zhihong}, booktitle={2012 12th International Conference on Quality Software}, pages={276--281}, year={2012}, organization={IEEE}}" class="inline-flex items-center text-xs font-bold text-slate-600 hover:text-purple-600 bg-slate-50 hover:bg-purple-50 px-3 py-2 rounded-lg transition-colors"><i class="fas fa-quote-right mr-2"></i> Copy BibTeX</button>
+                        <div class="w-full md:w-72 flex-shrink-0 order-1 md:order-2 mb-2 md:mb-0">
+                            <img src="https://yuxiang-zhou.github.io/statics/fingertips.png" class="pub-thumbnail rounded-lg shadow-sm border border-slate-100 w-full h-auto" alt="Fingertips">
                         </div>
                     </div>
                 </div>
